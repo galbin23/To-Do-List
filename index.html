@@ -1,1 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>To Do List by Grant Albin</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>To Do List!</h1>
 
+    <form id="todo-form">
+      <input 
+        type="text" 
+        id="task-input" 
+        placeholder="What needs to be done?" 
+        autofocus
+      >
+      <select id="tag-select">
+        <option value="">No tag</option>
+        <option value="school">school</option>
+        <option value="work">work</option>
+        <option value="personal">personal</option>
+        <option value="urgent">priority</option>
+        <option value="shopping">fun</option>
+      </select>
+      <button type="submit">Add Task</button>
+    </form>
+
+    <div id="error" class="error hidden">Task name cannot be empty!</div>
+
+    <div class="filters">
+      <div class="status-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="active">Active</button>
+        <button class="filter-btn" data-filter="completed">Completed</button>
+      </div>
+      <div class="tag-filter">
+        <label>Tag: </label>
+        <select id="tag-filter">
+          <option value="all">All tags</option>
+        </select>
+      </div>
+    </div>
+
+    <ul id="todo-list"></ul>
+
+    <div class="footer">
+      <span id="active-count">0 active tasks</span>
+    </div>
+  </div>
+
+  <script src="jscript.js"></script>
+</body>
+</html>
